@@ -9,6 +9,7 @@ const movieData = require('../lib/Ar/movie');
 const personData = require('../lib/Ar/person');
 const productData = require('../lib/Ar/product');
 const vehicleData = require('../lib/Ar/vehicle');
+const companiesData = require('../lib/Ar/company');
 
 // Address data functions
 function getRandomAddress() {
@@ -131,6 +132,13 @@ function getRandomVehicle() {
   return vehicles[randomIndex];
 }
 
+//companies data 
+function getRandomCompany() {
+  const companies= companiesData.companies;
+  const randomIndex = Math.floor(Math.random() * companies.length);
+  return companies[randomIndex];
+}
+
 
 module.exports = {
   getRandomAddress,
@@ -143,4 +151,5 @@ module.exports = {
   getRandomProductName,
   getRandomColor,
   getRandomVehicle,
+  getRandomCompany,
 };

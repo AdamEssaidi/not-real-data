@@ -3,6 +3,7 @@ const addressData = require('../lib/En/adress');
 const animalData = require('../lib/En/animal');
 const bookData = require('../lib/En/book');
 const colorData = require('../lib/En/color');
+const companiesData = require('../lib/En/company');
 const foodData = require('../lib/En/food');
 const holidayData = require('../lib/En/holiday');
 const movieData = require('../lib/En/movie');
@@ -131,6 +132,12 @@ function getRandomVehicle() {
   return vehicles[randomIndex];
 }
 
+//companies data 
+function getRandomCompany() {
+  const companies= companiesData.companies;
+  const randomIndex = Math.floor(Math.random() * companies.length);
+  return companies[randomIndex];
+}
 
 module.exports = {
   getRandomAddress,
@@ -143,4 +150,5 @@ module.exports = {
   getRandomProductName,
   getRandomColor,
   getRandomVehicle,
+  getRandomCompany,
 };
