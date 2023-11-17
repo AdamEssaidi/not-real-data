@@ -111,6 +111,15 @@ function getRandomPersonName() {
   return `${firstName} ${lastName}`;
 }
 
+//email generator
+function getRandomEmail(){
+  const firsthalf= getRandomPersonName().split(' ').join(''); //we delete the spaces between first and last name
+  const lastPart =["exemple",'outlook',"gmail","mail","ukil","test"];
+  const randomIndex= Math.floor(Math.random() * movieTitles.length);
+  return `${firsthalf}@${lastPart[randomIndex]}`
+}
+
+
 // Product data functions
 function getRandomProductName() {
   const productNames = productData.produits.noms;
@@ -151,4 +160,5 @@ module.exports = {
   getRandomColor,
   getRandomVehicle,
   getRandomCompany,
+  getRandomEmail,
 };
